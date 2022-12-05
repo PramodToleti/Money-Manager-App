@@ -1,0 +1,87 @@
+@media screen and (max-width: 576px) {
+  .money-details-card {
+    border-radius: 20px;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    transition: transform 0.5s;
+    animation: zoomIn 0.4s linear;
+  }
+}
+
+.money-details-card:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 577px) {
+  .money-details-card {
+    width: 30%;
+    height: 150px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 30px;
+    transition: transform 0.5s;
+    animation: zoomIn 0.4s linear;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.balance-card {
+  border: 1px solid #84cc16;
+  background-color: #ecfccb;
+}
+
+.income-card {
+  border: 1px solid #06b6d4;
+  background-color: #cffafe;
+}
+
+.expenses-card {
+  border: 1px solid #7c3aed;
+  background-color: #ede9fe;
+}
+
+.money-details-icon {
+  width: 60px;
+}
+
+.money-details {
+  margin-left: 20px;
+  text-align: start;
+}
+
+.money-details-heading {
+  color: #475569;
+  font-size: 13px;
+  font-family: 'Roboto';
+  margin-top: 0;
+}
+
+.user-money {
+  color: #475569;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  margin: 0px;
+}
+
+@media screen and (min-width: 577px) {
+  .money-details-heading {
+    font-size: 16px;
+  }
+
+  .user-money {
+    font-size: 25px;
+  }
+}

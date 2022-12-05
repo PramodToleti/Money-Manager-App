@@ -1,0 +1,384 @@
+.bg-container {
+  min-height: 100vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  width: 85%;
+}
+
+.pull-image {
+  position: absolute;
+}
+
+@media screen and (min-width: 577px) {
+  .pull-image {
+    animation: pullBack 2s forwards;
+  }
+
+  .money-manager-card {
+    animation: rollBack 2s forwards;
+  }
+}
+
+@keyframes removeImage {
+  0% {
+    width: 100px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+@keyframes pullBack {
+  0% {
+    left: 30vmin;
+  }
+  90% {
+    opacity: 0.9;
+    left: 5vmin;
+  }
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .pull-image {
+    width: 150px;
+  }
+}
+
+/* Money Manager card */
+
+.money-manager-card {
+  width: 100%;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/money-manager/money-manager-bg.png');
+  background-size: cover;
+  min-height: 200px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+@keyframes rollBack {
+  0% {
+    right: -40vmin;
+  }
+
+  75% {
+    right: -22vmin;
+  }
+
+  100% {
+    right: 0vmin;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .money-manager-card {
+    align-items: flex-start;
+    padding-left: 40px;
+  }
+}
+
+.username {
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.username-text {
+  background-image: linear-gradient(135deg, #7c3aed, #06b6d4);
+  background-clip: text;
+  color: transparent;
+}
+
+.welcome-text {
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 14px;
+  text-align: center;
+}
+
+@media screen and (min-width: 577px) {
+  .welcome-text {
+    font-size: 16px;
+  }
+}
+
+.money-manager-text {
+  color: #0b69ff;
+  font-weight: 600;
+}
+
+/* Money Details Container */
+
+@media screen and (max-width: 576px) {
+  .money-details-container {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 400px;
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .money-details-container {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .transaction-history-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .transaction-history-container {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 25px;
+  }
+}
+
+/* Transaction Container */
+
+.transaction-container {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  box-shadow: 10px 10px #00000030;
+}
+
+.transaction-container:hover {
+  box-shadow: 10px 10px #000000;
+}
+
+@media screen and (min-width: 577px) {
+  .transaction-container {
+    width: 35%;
+  }
+}
+
+.transaction-form {
+  width: 85%;
+}
+
+.add-transaction-heading {
+  color: #334155;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.label-text {
+  color: #7e858e;
+  font-family: 'Roboto';
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.input-bar {
+  width: 100%;
+  border: 1px solid #d7dfe9;
+  border-radius: 5px;
+  height: 40px;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.input-bar:hover {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.add-button {
+  border: 0;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px;
+  background-color: #0b69ff;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-image: linear-gradient(
+    135deg,
+    rgb(104, 223, 134),
+    rgb(164, 223, 169)
+  );
+}
+
+/* History Container */
+
+.history-container {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  width: 85%;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ffffff;
+  box-shadow: 10px 10px #00000030;
+}
+
+.history-container:hover {
+  box-shadow: 10px 10px #000000;
+}
+
+@media screen and (min-width: 577px) {
+  .history-container {
+    width: 60%;
+    height: 420px;
+  }
+}
+
+.history-heading {
+  color: #334155;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.history-body {
+  width: 85%;
+}
+
+.history-details-header-container {
+  border: 1px solid #cbd5e1;
+  padding: 10px;
+}
+
+.header-titles {
+  display: flex;
+  width: 93%;
+}
+
+@media screen and (min-width: 577px) {
+  .header-titles {
+    padding-left: 10px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  .header-titles {
+    width: 95%;
+  }
+}
+
+.history-header-title {
+  font-size: 14px;
+  color: #334155;
+  font-family: 'Roboto';
+  font-weight: 500;
+  width: 50%;
+  margin: 0px;
+}
+
+.Transaction-item-container {
+  padding: 0px;
+  margin: 0px;
+}
+
+.empty-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  height: 330px;
+}
+
+.empty-image {
+  margin-top: 20px;
+  width: 150px;
+}
+
+.empty-text {
+  font-family: 'Bree Serif';
+}
+
+.empty-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.money-icon {
+  display: none;
+}
+
+@media screen and (min-width: 577px) {
+  .money-icon {
+    width: 30px;
+    animation: moveIcon 1.3s infinite alternate;
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    align-self: flex-start;
+    margin-top: 60px;
+  }
+}
+
+@keyframes moveIcon {
+  0% {
+    top: -2vmin;
+  }
+  100% {
+    top: 0vmin;
+  }
+}
